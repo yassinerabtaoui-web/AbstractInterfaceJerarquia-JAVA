@@ -10,7 +10,7 @@ package Jerarquia;
  * @compay IESABASTOS
  * @author Yassine
  */
-public abstract class Empleado extends Persona {
+ abstract class Empleado extends Persona {
 
     protected String idEmpleado;
 
@@ -19,7 +19,7 @@ public abstract class Empleado extends Persona {
         this.idEmpleado = idEmpleado;
     }
 
-    public abstract double calcularSalario();
+  abstract double calcularSalario();
 
     @Override
     public String toString() {
