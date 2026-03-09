@@ -34,15 +34,12 @@ public class AAEmpresa {
                 System.out.println("Salario no disponible");
                 System.out.println("----");
             }
-               if (p instanceof Remoto){
-                   System.out.println("------ TRABAJADORES EN REMOTO------");
-                   ((Remoto) p).trabajarDesdeCasa();
-                   System.out.println("");
-               }
+            if (p instanceof Remoto) {
+                System.out.println("------ TRABAJADORES EN REMOTO------");
+                ((Remoto) p).trabajarDesdeCasa();
+                System.out.println("");
+            }
         }
-
-        
-        
 
     }
 }
