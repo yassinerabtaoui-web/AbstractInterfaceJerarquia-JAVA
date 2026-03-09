@@ -13,23 +13,30 @@ package Jerarquia;
  */
 public class Encargado extends Empleado implements Remoto, Gestion, GestionInventario {
     private double base;
-    private double plusResponsabilidad;
+    private double plus;
 
     public Encargado(String nombre, int edad, String id, double base, double plus) {
         super(nombre, edad, id);
         this.base = base;
-        this.plusResponsabilidad = plus;
+        this.plus = plus;
+    }
+
+    public double calcularSalario() { 
+        return base + plus; 
     }
 
     @Override
-    public double calcularSalario() { return base + plusResponsabilidad; }
+    public void trabajarDesdeCasa() {
+        System.out.println(nombre + " gestiona turnos desde su laptop."); 
+    }
 
     @Override
-    public void trabajarDesdeCasa() { System.out.println(nombre + " gestiona turnos desde su laptop."); }
+    public void dirigirEquipo() { 
+        System.out.println(nombre + " supervisa el local."); 
+    }
 
     @Override
-    public void dirigirEquipo() { System.out.println(nombre + " supervisa el local."); }
-
-    @Override
-    public void sincronizarStock() { System.out.println(nombre + " revisa el inventario general."); }
+    public void sincronizarStock() { 
+        System.out.println(nombre + " revisa el inventario general."); 
+    }
 }

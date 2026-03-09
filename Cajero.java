@@ -2,7 +2,6 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-
 package Jerarquia;
 
 /**
@@ -12,6 +11,7 @@ package Jerarquia;
  * @author Yassine
  */
 public class Cajero extends Empleado implements GestionInventario {
+
     private double salarioMensual;
 
     public Cajero(String nombre, int edad, String id, double salario) {
@@ -19,9 +19,12 @@ public class Cajero extends Empleado implements GestionInventario {
         this.salarioMensual = salario;
     }
 
-    @Override
-    public double calcularSalario() { return salarioMensual; }
+    public double calcularSalario() {
+        return salarioMensual;
+    }
 
     @Override
-    public void sincronizarStock() { System.out.println(nombre + " está contando productos en caja."); }
+    public void sincronizarStock() {
+        System.out.println(nombre + " está contando productos en caja.");
+    }
 }

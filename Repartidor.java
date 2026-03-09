@@ -21,6 +21,8 @@ public class Repartidor extends Empleado {
         this.precioHora = precioHora;
     }
 
-    @Override
-    public double calcularSalario() { return horas * precioHora; }
+    
+    public double calcularSalario() { 
+        return horas * precioHora; 
+    }
 }

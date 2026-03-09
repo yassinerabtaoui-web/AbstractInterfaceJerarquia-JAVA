@@ -13,10 +13,10 @@ package Jerarquia;
 public class AAEmpresa {
 
     public static void main(String[] args) {
-        // Vector de tipo Persona (Polimorfismo de datos)
+
         Persona[] personal = new Persona[4];
 
-        personal[0] = new CEO("Marta", 45, "CEO-001", 5000, 2000);
+        personal[0] = new CEO("Marta", 45, "CEO-001", 5000);
         personal[1] = new Cajero("Luis", 22, "CAJ-102", 1200);
         personal[2] = new Repartidor("Jorge", 30, "REP-505", 160, 10);
         personal[3] = new Encargado("Ana", 35, "ENC-201", 1800, 300);
@@ -25,8 +25,24 @@ public class AAEmpresa {
         for (Persona p : personal) {
             System.out.println(p.toString()); // Llama al toString de Empleado
             System.out.println("Tipo: " + p.getClass().getSimpleName());
-            System.out.println("Salario: " + p.calcularSalario() + "euros");
-            System.out.println("----");
+            if (p instanceof Empleado) {
+                Empleado e = (Empleado) p;
+                double salario = e.calcularSalario();
+                System.out.println("Salario: " + salario);
+                System.out.println("");
+            } else {
+                System.out.println("Salario no disponible");
+                System.out.println("----");
+            }
+               if (p instanceof Remoto){
+                   System.out.println("------ TRABAJADORES EN REMOTO------");
+                   ((Remoto) p).trabajarDesdeCasa();
+                   System.out.println("");
+               }
         }
+
+        
+        
+
     }
 }

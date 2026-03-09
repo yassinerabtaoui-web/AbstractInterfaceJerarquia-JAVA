@@ -2,7 +2,6 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-
 package Jerarquia;
 
 /**
@@ -12,12 +11,15 @@ package Jerarquia;
  * @author Yassine
  */
 public abstract class Empleado extends Persona {
+
     protected String idEmpleado;
 
     public Empleado(String nombre, int edad, String idEmpleado) {
         super(nombre, edad);
         this.idEmpleado = idEmpleado;
     }
+
+    public abstract double calcularSalario();
 
     @Override
     public String toString() {
